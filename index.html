@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Split-Screen Layout</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="screen calculator-screen">
+      <h2>Calculator</h2>
+      <div id="calculator">
+        <input type="text" id="calc-display" readonly>
+        <div class="calc-buttons">
+          <button onclick="pressKey('1')">1</button>
+          <button onclick="pressKey('2')">2</button>
+          <button onclick="pressKey('3')">3</button>
+          <button onclick="pressKey('4')">4</button>
+          <button onclick="pressKey('5')">5</button>
+          <button onclick="pressKey('6')">6</button>
+          <button onclick="pressKey('7')">7</button>
+          <button onclick="pressKey('8')">8</button>
+          <button onclick="pressKey('9')">9</button>
+          <button onclick="pressKey('0')">0</button>
+          <button onclick="pressKey('-')">-</button>
+          <button onclick="pressKey('*')">*</button>
+          <button onclick="pressKey('+')">+</button>
+          <button onclick="pressKey('/')">/</button>
+          <button onclick="calculate('=')">=</button>
+          <button onclick="pressKey('C')">C</button>
+        </div>
+      </div>
+    </div>
+    <div class="screen redirect-screen">
+        <h2>Website Redirect</h2>
+      <label for="url-input">Enter URL:</label>
+      <input type="text" id="url-input" placeholder="e.g., https://example.com">
+      <button onclick="redirect()">Redirect</button>
+      <iframe id="redirect-iframe" src="" frameborder="0"></iframe>
+    </div>
+    <div class="screen search-screen">
+      <h2>Search Bar</h2>
+      <input type="text" id="search-box" placeholder="Search Google">
+      <button onclick="searchGoogle()">Search</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
